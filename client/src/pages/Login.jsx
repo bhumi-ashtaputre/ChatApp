@@ -66,8 +66,8 @@ const Login = () => {
   };
 
   const handleGoogleLogin = () => {
-    window.location.href = 'http://localhost:5000/api/auth/google';
-  };
+    const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:5000';
+window.location.href = `${serverUrl}/api/auth/google`;
 
   const inputStyle = {
     backgroundColor: '#FFFFFF',
